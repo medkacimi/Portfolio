@@ -87,8 +87,4 @@ portfolio/
 - 💼 [LinkedIn](https://www.linkedin.com/in/mohamed-kacimi/)
 - 🐱 [GitHub](https://github.com/medkacimi)
 
-## 📜 Licence
-© 2025 KACIMI Mohamed - Tous droits réservés
-
----
 *Développé avec  par Mohamed KACIMI*
