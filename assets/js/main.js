@@ -1,5 +1,6 @@
- // Navbar scroll effect
- window.addEventListener('scroll', function() {
+// Gestion de l'effet de scroll sur la barre de navigation
+// Ajoute une classe lorsque l'utilisateur défile la page
+window.addEventListener('scroll', function() {
   if (window.scrollY > 50) {
     document.querySelector('.navbar').classList.add('navbar-scrolled');
   } else {
@@ -7,7 +8,8 @@
   }
 });
 
-// Smooth scroll for navigation links
+// Navigation fluide pour les liens internes
+// Permet un défilement doux vers les sections
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -17,13 +19,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Fade in animation on scroll
+// Configuration de l'observateur d'intersection
+// Utilisé pour les animations au défilement
 const observerOptions = {
-  root: null,
-  threshold: 0.1,
-  rootMargin: '0px'
+  root: null,          // Utilise le viewport comme racine
+  threshold: 0.1,      // Déclenche lorsque 10% de l'élément est visible
+  rootMargin: '0px'    // Aucune marge supplémentaire
 };
 
+// Gestion des animations de fondu à l'entrée
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -32,11 +36,13 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
+// Application de l'observateur à tous les éléments avec la classe fade-in
 document.querySelectorAll('.fade-in').forEach((element) => {
   observer.observe(element);
 });
 
-// Animate progress bars
+// Animation des barres de progression
+// Met à jour la largeur des barres en fonction du pourcentage
 function animateProgressBars() {
   document.querySelectorAll('.progress-bar').forEach(bar => {
     const targetWidth = bar.parentElement.previousElementSibling.lastElementChild.textContent;
@@ -44,7 +50,8 @@ function animateProgressBars() {
   });
 }
 
-// Initialize progress bars when skills section is visible
+// Initialisation des barres de progression
+// Déclenche l'animation lorsque la section est visible
 const skillsSection = document.querySelector('#skills');
 const skillsObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

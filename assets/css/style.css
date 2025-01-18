@@ -1,3 +1,5 @@
+/* Style de la section héro */
+/* Crée un fond sombre semi-transparent sur l'image de fond */
 .hero-section {
   height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('your-background.jpg');
@@ -5,12 +7,16 @@
   background-position: center;
 }
 
+/* Style de la barre de navigation lors du défilement */
+/* Ajoute un effet de flou et une transition fluide */
 .navbar-scrolled {
   background-color: #212529e6 !important;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
 
+/* Animations des cartes de projet */
+/* Effet de survol avec élévation */
 .project-card {
   transition: transform 0.3s ease;
 }
@@ -19,10 +25,13 @@
   transform: translateY(-10px);
 }
 
+/* Animation des barres de progression */
 .progress-bar {
   transition: width 1.5s ease;
 }
 
+/* Styles des icônes sociales */
+/* Animation au survol avec changement de couleur */
 .social-icon {
   font-size: 1.5rem;
   margin: 0 10px;
@@ -35,6 +44,8 @@
   color: #0d6efd;
 }
 
+/* Animation de fondu à l'entrée */
+/* Utilisé pour les éléments qui apparaissent au défilement */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -46,6 +57,8 @@
   transform: translateY(0);
 }
 
+/* Styles de la timeline de formation */
+/* Crée une ligne verticale avec des points pour chaque événement */
 .timeline-item {
   position: relative;
   padding: 20px;
