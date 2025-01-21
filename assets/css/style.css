@@ -1,78 +1,73 @@
-/* Style de la section héro */
+/* Style de la section héro : page d'accueil principale */
 /* Crée un fond sombre semi-transparent sur l'image de fond */
 .hero-section {
-  height: 100vh;
+  height: 100vh; /* Hauteur totale de la fenêtre */
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('your-background.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* Couvre tout l'écran */
+  background-position: center; /* Centrage de l'image de fond */
 }
 
 /* Style de la barre de navigation lors du défilement */
 /* Ajoute un effet de flou et une transition fluide */
 .navbar-scrolled {
-  background-color: #212529e6 !important;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  background-color: #212529e6 !important; /* Fond sombre semi-transparent */
+  backdrop-filter: blur(10px); /* Effet de flou sur l'arrière-plan */
+  transition: all 0.3s ease; /* Animation douce du changement */
 }
 
 /* Animations des cartes de projet */
 /* Effet de survol avec élévation */
 .project-card {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Animation de transformation */
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-}
-
-/* Animation des barres de progression */
-.progress-bar {
-  transition: width 1.5s ease;
+  transform: translateY(-10px); /* Légère élévation au survol */
 }
 
 /* Styles des icônes sociales */
 /* Animation au survol avec changement de couleur */
 .social-icon {
-  font-size: 1.5rem;
-  margin: 0 10px;
-  color: white;
-  transition: transform 0.3s ease;
+  font-size: 1.5rem; /* Taille des icônes */
+  margin: 0 10px; /* Espacement entre les icônes */
+  color: white; /* Couleur blanche par défaut */
+  transition: transform 0.3s ease; /* Animation douce */
 }
 
 .social-icon:hover {
-  transform: translateY(-5px);
-  color: #0d6efd;
+  transform: translateY(-5px); /* Remontée légère au survol */
+  color: #0d6efd; /* Changement de couleur */
 }
 
 /* Animation de fondu à l'entrée */
 /* Utilisé pour les éléments qui apparaissent au défilement */
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0; /* Initialement transparent */
+  transform: translateY(20px); /* Légèrement décalé vers le bas */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Animations douces */
 }
 
 .fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /* Devient totalement visible */
+  transform: translateY(0); /* Revient à sa position initiale */
 }
 
 /* Styles de la timeline de formation */
 /* Crée une ligne verticale avec des points pour chaque événement */
 .timeline-item {
-  position: relative;
-  padding: 20px;
-  border-left: 2px solid #0d6efd;
-  margin-left: 20px;
+  position: relative; /* Permet un positionnement précis */
+  padding: 20px; /* Espacement interne */
+  border-left: 2px solid #0d6efd; /* Ligne verticale bleue */
+  margin-left: 20px; /* Décalage pour créer l'effet de timeline */
 }
 
 .timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -9px;
+  content: ''; /* Crée un élément virtuel */
+  position: absolute; /* Positionné par rapport à l'élément parent */
+  left: -9px; /* Positionnement précis */
   top: 28px;
   width: 16px;
   height: 16px;
-  border-radius: 50%;
-  background: #0d6efd;
+  border-radius: 50%; /* Crée un point circulaire */
+  background: #0d6efd; /* Couleur bleue */
 }

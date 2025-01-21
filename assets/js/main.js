@@ -1,3 +1,17 @@
+ // Typed.js Configuration
+ new Typed('#typed-description', {
+  strings: [
+    'Étudiant en L3 INGI',
+    'Passionné par l\'Innovation Technologique'
+  ],
+  typeSpeed: 60,        // Vitesse de frappe (en millisecondes par caractère)
+  backSpeed: 40,        // Vitesse de suppression du texte
+  backDelay: 2000,      // Temps d'attente avant de sup
+  loop: true,           // Continuous looping
+  cursorChar: '|',      // Cursor character
+  smartBackspace: true  // More natural backspacing
+});
+
 // Gestion de l'effet de scroll sur la barre de navigation
 // Ajoute une classe lorsque l'utilisateur défile la page
 window.addEventListener('scroll', function() {
@@ -78,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Configuration des données du graphique
     data: {
       // Étiquettes pour chaque axe du radar
-      labels: ['HTML/CSS', 'JavaScript', 'Microsoft Office'],
+      labels: ['HTML/CSS', 'JavaScript', 'Microsoft Office', 'Bibliothéques Python'],
       
       // Définition des ensembles de données
       datasets: [
@@ -88,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
           data: [50, 0, 0], // Seule la première valeur est non nulle pour isoler la compétence
           backgroundColor: 'rgba(54, 162, 235, 0.2)', // Couleur de remplissage semi-transparente
           borderColor: 'rgba(54, 162, 235, 1)', // Couleur de la bordure
-          borderWidth: 2,
+          borderWidth: 4,
           pointBackgroundColor: 'rgba(54, 162, 235, 1)',
           pointBorderColor: '#fff',
           pointHoverBackgroundColor: '#fff',
@@ -100,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
           data: [0, 40, 0],
           backgroundColor: 'rgba(255, 206, 86, 0.2)',
           borderColor: 'rgba(255, 206, 86, 1)',
-          borderWidth: 2,
+          borderWidth: 4,
           pointBackgroundColor: 'rgba(255, 206, 86, 1)',
           pointBorderColor: '#fff',
           pointHoverBackgroundColor: '#fff',
@@ -108,15 +122,27 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
           // Configuration pour Microsoft Office (turquoise)
-          label: 'Microsoft Office',
-          data: [0, 0, 60],
+          label: 'Microsoft Office (Excel, Word, Powerpoint)',
+          data: [0, 0, 40],
           backgroundColor: 'rgba(75, 192, 192, 0.2)',
           borderColor: 'rgba(75, 192, 192, 1)',
-          borderWidth: 2,
+          borderWidth: 4,
           pointBackgroundColor: 'rgba(75, 192, 192, 1)',
           pointBorderColor: '#fff',
           pointHoverBackgroundColor: '#fff',
           pointHoverBorderColor: 'rgba(75, 192, 192, 1)'
+        },
+        {
+          // Configuration pour Python (vert)
+          label: 'Bibliothéques Python (Numpy, Pandas, Matplotlib)',
+          data: [0, 0, 0, 20],
+          backgroundColor: 'rgba(75, 192, 75, 0.2)',
+          borderColor: 'rgba(75, 192, 75, 1)',
+          borderWidth: 4,
+          pointBackgroundColor: 'rgba(75, 192, 75, 1)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(75, 192, 75, 1)'
         }
       ]
     },

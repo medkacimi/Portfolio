@@ -1,0 +1,24 @@
+/* Style personnalisé pour le curseur de Typed.js */
+
+/* Animation du curseur avec un effet de clignotement */
+.typed-cursor {
+    font-size: 1.2rem; /* Taille du curseur */
+    color: #0d6efd; /* Couleur bleue (couleur Bootstrap primary) */
+    opacity: 1; /* Initialement totalement visible */
+    animation: blink 0.7s infinite; /* Animation de clignotement en continu */
+}
+
+/* Définition de l'animation de clignotement */
+@keyframes blink {
+    0% { opacity: 1; } /* Totalement visible */
+    50% { opacity: 0; } /* Moitié transparent */
+    100% { opacity: 1; } /* Redevient totalement visible */
+}
+
+/* Conteneur pour assurer un espace constant */
+.typed-container {
+    min-height: 60px; /* Hauteur minimale pour éviter les sauts */
+    display: flex; /* Utilisation de flexbox */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+}
