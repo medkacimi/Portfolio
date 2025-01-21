@@ -10,15 +10,15 @@ Un portfolio moderne et interactif, conçu pour mettre en valeur mon parcours ac
 ```javascript
 const techStack = {
     frontend: {
-        html: 'HTML5',
+        html;
         css;
         javascript,
-        framework: 'Bootstrap 5.3.0'
+        framework: 'Bootstrap'
     },
     design: {
-        icons: 'Font Awesome 6.4.0',
+        icons: 'Font Awesome',
         responsive: true,
-        animations: 'Custom CSS3'
+        animations: 'CSS'
     }
 }
 ```
