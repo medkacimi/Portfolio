@@ -1,3 +1,19 @@
+ // Initialisation de ScrollReveal
+ ScrollReveal({
+  reset: true, // Répéter l'animation à chaque apparition
+  distance: '50px', // Distance de l'animation
+  duration: 1000, // Durée de l'animation (en ms)
+  delay: 500 // Délai avant le début de l'animation
+});
+
+// Animation pour les titres
+ScrollReveal().reveal('h2', { origin: 'top' });
+
+// Animation pour les sections
+ScrollReveal().reveal('.section', { origin: 'bottom' });
+
+// Animation pour les boutons
+ScrollReveal().reveal('.project-button', { origin: 'left' });
  // Typed.js Configuration
  new Typed('#typed-description', {
   strings: [
