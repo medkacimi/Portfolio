@@ -13,7 +13,7 @@ const techStack = {
         html;
         css;
         javascript,
-        framework: 'Bootstrap'
+        framework: 'Bootstrap','Email.js','Typed.js','Scrollreveal.js'
     },
     design: {
         icons: 'Font Awesome',
