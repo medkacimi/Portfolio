@@ -1,4 +1,64 @@
- // Initialisation de ScrollReveal
+// Configuration de EmailJS
+(function() {
+  // Initialisation de EmailJS avec votre clé publique
+  emailjs.init("UtSd0KC2w_RkDDonM");
+})();
+
+// Gestion du formulaire de contact
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Afficher un indicateur de chargement
+  const submitButton = this.querySelector('button[type="submit"]');
+  const originalButtonText = submitButton.innerHTML;
+  submitButton.disabled = true;
+  submitButton.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Envoi en cours...';
+
+  // Récupération des données du formulaire
+  const templateParams = {
+    from_name: document.getElementById('from_name').value,
+    from_email: document.getElementById('from_email').value,
+    message: document.getElementById('message').value
+  };
+
+  // Envoi de l'email via EmailJS
+  emailjs.send('service_3aix9n5', 'template_v14ztqh', templateParams)
+    .then(function(response) {
+      // Succès
+      showAlert('success', 'Message envoyé avec succès !');
+      document.getElementById('contact-form').reset();
+    })
+    .catch(function(error) {
+      // Erreur
+      showAlert('danger', 'Une erreur est survenue lors de l\'envoi du message.');
+      console.error('EmailJS error:', error);
+    })
+    .finally(function() {
+      // Réactiver le bouton
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonText;
+    });
+});
+
+// Fonction pour afficher les alertes
+function showAlert(type, message) {
+  const alertDiv = document.createElement('div');
+  alertDiv.className = `alert alert-${type} alert-dismissible fade show mt-3`;
+  alertDiv.role = 'alert';
+  alertDiv.innerHTML = `
+    ${message}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  `;
+  
+  document.getElementById('contact-form').insertAdjacentElement('afterend', alertDiv);
+  
+  // Auto-fermeture après 5 secondes
+  setTimeout(() => {
+    alertDiv.remove();
+  }, 5000);
+}
+
+// Initialisation de ScrollReveal
  ScrollReveal({
   reset: true, // Répéter l'animation à chaque apparition
   distance: '50px', // Distance de l'animation
@@ -95,109 +155,183 @@ const skillsObserver = new IntersectionObserver((entries) => {
 
 skillsObserver.observe(skillsSection);
 
-// Configuration du graphique radar pour visualiser les compétences
+// Configuration du graphique de compétences
 document.addEventListener('DOMContentLoaded', function() {
-  // Récupération du contexte du canvas
   const ctx = document.getElementById('skillsChart').getContext('2d');
   
-  // Création d'une nouvelle instance de Chart.js
-  new Chart(ctx, {
-    // Définition du type de graphique (radar pour une visualisation en toile d'araignée)
-    type: 'bar',
-    
-    // Configuration des données du graphique
-    data: {
-      // Étiquettes pour chaque axe du radar
-      labels: ['HTML/CSS', 'JavaScript', 'Microsoft Office', 'Bibliothéques Python'],
-      
-      // Définition des ensembles de données
-      datasets: [
-        {
-          // Configuration pour HTML/CSS (bleu)
-          label: 'HTML/CSS',
-          data: [50, 0, 0], // Seule la première valeur est non nulle pour isoler la compétence
-          backgroundColor: 'rgba(54, 162, 235, 0.2)', // Couleur de remplissage semi-transparente
-          borderColor: 'rgba(54, 162, 235, 1)', // Couleur de la bordure
-          borderWidth: 4,
-          pointBackgroundColor: 'rgba(54, 162, 235, 1)',
-          pointBorderColor: '#fff',
-          pointHoverBackgroundColor: '#fff',
-          pointHoverBorderColor: 'rgba(54, 162, 235, 1)'
-        },
-        {
-          // Configuration pour JavaScript (jaune)
-          label: 'JavaScript',
-          data: [0, 40, 0],
-          backgroundColor: 'rgba(255, 206, 86, 0.2)',
-          borderColor: 'rgba(255, 206, 86, 1)',
-          borderWidth: 4,
-          pointBackgroundColor: 'rgba(255, 206, 86, 1)',
-          pointBorderColor: '#fff',
-          pointHoverBackgroundColor: '#fff',
-          pointHoverBorderColor: 'rgba(255, 206, 86, 1)'
-        },
-        {
-          // Configuration pour Microsoft Office (turquoise)
-          label: 'Microsoft Office (Excel, Word, Powerpoint)',
-          data: [0, 0, 40],
-          backgroundColor: 'rgba(75, 192, 192, 0.2)',
-          borderColor: 'rgba(75, 192, 192, 1)',
-          borderWidth: 4,
-          pointBackgroundColor: 'rgba(75, 192, 192, 1)',
-          pointBorderColor: '#fff',
-          pointHoverBackgroundColor: '#fff',
-          pointHoverBorderColor: 'rgba(75, 192, 192, 1)'
-        },
-        {
-          // Configuration pour Python (vert)
-          label: 'Bibliothéques Python (Numpy, Pandas, Matplotlib)',
-          data: [0, 0, 0, 20],
-          backgroundColor: 'rgba(75, 192, 75, 0.2)',
-          borderColor: 'rgba(75, 192, 75, 1)',
-          borderWidth: 4,
-          pointBackgroundColor: 'rgba(75, 192, 75, 1)',
-          pointBorderColor: '#fff',
-          pointHoverBackgroundColor: '#fff',
-          pointHoverBorderColor: 'rgba(75, 192, 75, 1)'
-        }
-      ]
-    },
-    
-    // Options de configuration du graphique
-    options: {
-      // Configuration des échelles
-      scales: {
-        r: {
-          angleLines: {
-            display: true // Affichage des lignes de grille radiales
-          },
-          suggestedMin: 0, // Valeur minimale de l'échelle
-          suggestedMax: 100, // Valeur maximale de l'échelle
-          ticks: {
-            stepSize: 20 // Intervalle entre les graduations
-          }
-        }
+  // Définition des données des compétences
+  const skillsData = {
+    labels: [
+      'Développement Front-end',
+      'Outils Microsoft',
+      'Data Analysis',
+      'Langages de programmation'
+    ],
+    datasets: [
+      {
+        label: 'HTML/CSS',
+        data: [90, 0, 0, 0],
+        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 2
       },
-      
-      // Configuration des plugins
+      {
+        label: 'JavaScript',
+        data: [70, 0, 0, 0],
+        backgroundColor: 'rgba(255, 206, 86, 0.5)',
+        borderColor: 'rgba(255, 206, 86, 1)',
+        borderWidth: 2
+      },
+      {
+        label: 'Excel',
+        data: [0, 80, 0, 0],
+        backgroundColor: 'rgba(75, 192, 192, 0.5)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 2
+      },
+      {
+        label: 'Word/PowerPoint',
+        data: [0, 85, 0, 0],
+        backgroundColor: 'rgba(153, 102, 255, 0.5)',
+        borderColor: 'rgba(153, 102, 255, 1)',
+        borderWidth: 2
+      },
+      {
+        label: 'Python (Numpy, Pandas)',
+        data: [0, 0, 75, 0],
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 2
+      },
+      {
+        label: 'Data Visualization',
+        data: [0, 0, 70, 0],
+        backgroundColor: 'rgba(255, 159, 64, 0.5)',
+        borderColor: 'rgba(255, 159, 64, 1)',
+        borderWidth: 2
+      },
+      {
+        label: 'Python',
+        data: [0, 0, 0, 75],
+        backgroundColor: 'rgba(75, 192, 75, 0.5)',
+        borderColor: 'rgba(75, 192, 75, 1)',
+        borderWidth: 2
+      },
+      {
+        label: 'Scilab',
+        data: [0, 0, 0, 65],
+        backgroundColor: 'rgba(255, 99, 71, 0.5)',
+        borderColor: 'rgba(255, 99, 71, 1)',
+        borderWidth: 2
+      }
+    ]
+  };
+
+  // Configuration avancée du graphique
+  const config = {
+    type: 'bar',
+    data: skillsData,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
       plugins: {
-        // Position de la légende
         legend: {
-          position: 'bottom'
+          position: 'bottom',
+          labels: {
+            padding: 20,
+            usePointStyle: true,
+            font: {
+              size: 12
+            }
+          }
         },
-        
-        // Configuration des info-bulles
         tooltip: {
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          padding: 12,
+          titleFont: {
+            size: 14
+          },
+          bodyFont: {
+            size: 13
+          },
           callbacks: {
-            // Personnalisation du texte des info-bulles
             label: function(context) {
-              const value = context.raw;
-              if (value === 0) return null; // Ne pas afficher les valeurs nulles
-              return `Niveau: ${value}%`;
+              let label = context.dataset.label || '';
+              if (label) {
+                label += ': ';
+              }
+              if (context.parsed.y !== null) {
+                label += context.parsed.y + '%';
+              }
+              return label;
             }
           }
         }
+      },
+      scales: {
+        x: {
+          stacked: true,
+          grid: {
+            display: false
+          },
+          ticks: {
+            font: {
+              size: 12
+            }
+          }
+        },
+        y: {
+          stacked: true,
+          beginAtZero: true,
+          max: 100,
+          ticks: {
+            callback: function(value) {
+              return value + '%';
+            },
+            stepSize: 20,
+            font: {
+              size: 12
+            }
+          },
+          grid: {
+            color: 'rgba(0, 0, 0, 0.1)'
+          }
+        }
+      },
+      animation: {
+        duration: 2000,
+        easing: 'easeInOutQuart'
+      },
+      interaction: {
+        intersect: false,
+        mode: 'index'
       }
     }
-  });
+  };
+
+  // Création du graphique
+  new Chart(ctx, config);
 });
+document.head.insertAdjacentHTML('beforeend', `
+  <style>
+    .skills-chart-container {
+      position: relative;
+      height: 400px;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    #skillsChart {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      background-color: white;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .skills-chart-container {
+        height: 500px;
+      }
+    }
+  </style>
+`);

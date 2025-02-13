@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KACIMI Mohamed | Portfolio</title>
+  <title>Portfolio</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <!-- Font Awesome -->
@@ -30,6 +30,9 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" href="#home">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">A propos</a>                
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#education">Formation</a>
@@ -69,7 +72,112 @@
       </div>
     </div>
   </header>
+  
+ <!-- Section À propos avec design moderne -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fade-in position-relative">
+      À propos de moi
+    </h2>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-lg border-0 fade-in">
+          <div class="card-body p-4 p-md-5">
+            <!-- Introduction personnelle -->
+            <p class="lead mb-4 text-primary fw-bold text-center">
+              Bonjour, je m'appelle KACIMI Mohamed
+            </p>
 
+            <!-- Description détaillée -->
+            <div class="mb-4">
+              <p class="text-center mb-4">
+                Étudiant passionné en <span class="fw-bold">L3 Informatique numérique et gestion industrielle</span> 
+                à l'IAE Savoie Mont Blanc.
+              </p>
+              <p>
+                Fort d'un parcours diversifié incluant une formation en sciences économiques et une expérience en classes préparatoires, 
+                j'ai développé une approche unique alliant compétences techniques et vision stratégique.
+              </p>
+              <p>
+                Ma passion pour le développement web et les nouvelles technologies me pousse constamment à explorer de nouveaux horizons 
+                et à relever des défis innovants.
+              </p>
+            </div>
+  <!-- Points clés -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="d-flex align-items-center mb-3">
+        <i class="fas fa-check-circle text-primary me-2"></i>
+        <span>Développement Front-end</span>
+      </div>
+      <div class="d-flex align-items-center mb-3">
+        <i class="fas fa-check-circle text-primary me-2"></i>
+        <span>Analyse de données</span>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex align-items-center mb-3">
+        <i class="fas fa-check-circle text-primary me-2"></i>
+        <span>Gestion de projets</span>
+      </div>
+      <div class="d-flex align-items-center mb-3">
+        <i class="fas fa-check-circle text-primary me-2"></i>
+        <span>Travail d'équipe</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to action -->
+  <div class="text-center">
+    <a href="#contact" class="btn btn-primary me-3 mb-2">
+      <i class="fas fa-envelope me-2"></i>Me contacter
+    </a>
+    <a href="#projects" class="btn btn-outline-primary mb-2">
+      <i class="fas fa-project-diagram me-2"></i>Voir mes projets
+    </a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Stats -->
+<div class="row mt-5 justify-content-center">
+<div class="col-md-10">
+<div class="row text-center">
+<div class="col-md-4 mb-4 mb-md-0">
+  <div class="card border-0 shadow-sm py-4 fade-in">
+    <div class="card-body">
+      <i class="fas fa-code fa-2x text-primary mb-3"></i>
+      <h3 class="fw-bold mb-2">3+</h3>
+      <p class="text-muted mb-0">Projets réalisés</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4 mb-4 mb-md-0">
+  <div class="card border-0 shadow-sm py-4 fade-in">
+    <div class="card-body">
+      <i class="fas fa-graduation-cap fa-2x text-primary mb-3"></i>
+      <h3 class="fw-bold mb-2">4+</h3>
+      <p class="text-muted mb-0">Années d'études</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card border-0 shadow-sm py-4 fade-in">
+    <div class="card-body">
+      <i class="fas fa-laptop-code fa-2x text-primary mb-3"></i>
+      <h3 class="fw-bold mb-2">3+</h3>
+      <p class="text-muted mb-0">Technologies maîtrisées</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
  <!-- Section Formation avec timeline chronologique -->
   <section id="education" class="py-5">
     <div class="container">
@@ -213,10 +321,9 @@
   <div class="container">
     <h2 class="text-center mb-5 fade-in">Compétences</h2>
     <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="skill-item mb-4 fade-in">
-           <!-- Canvas pour le graphique de compétences -->
-          <canvas id="skillsChart" width="400"  height="200"></canvas>
+      <div class="col-md-10">
+        <div class="skills-chart-container fade-in">
+          <canvas id="skillsChart"></canvas>
         </div>
       </div>
     </div>
@@ -247,77 +354,32 @@
     </div>
   </div>
 </section>
-<!-- Section Contact avec formulaire -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5 fade-in">Contact</h2>
-      <div class="row justify-content-between">
-        <!-- Contact Information -->
-        <div class="col-md-5">
-          <div class="card shadow h-100 fade-in">
-            <div class="card-body p-4">
-              <h3 class="card-title mb-4 text-primary">Mes Coordonnées</h3>
-              <div class="d-flex align-items-center mb-4">
-                <div class="icon-wrapper me-3">
-              <!-- icones en utilisant Font awesome -->
-                  <i class="fas fa-user fa-lg text-primary"></i> 
-                </div>
-                <div>
-                  <strong class="d-block mb-1">Nom</strong>
-                  <p class="mb-0 text-dark">KACIMI Mohamed</p>
-                </div>
-              </div>
-              <div class="d-flex align-items-center mb-4">
-                <div class="icon-wrapper me-3">
-                  <i class="fas fa-envelope fa-lg text-primary"></i>
-                </div>
-                <div>
-                  <strong class="d-block mb-1">Email</strong>
-                  <p class="mb-0 text-dark">meddkacimi@gmail.com</p>
-                </div>
-              </div>
-              <div class="d-flex align-items-center mb-4">
-                <div class="icon-wrapper me-3">
-                  <i class="fas fa-phone fa-lg text-primary"></i>
-                </div>
-                <div>
-                  <strong class="d-block mb-1">Téléphone</strong>
-                  <p class="mb-0 text-dark">0745002552</p>
-                </div>
-              </div>
-              <div class="d-flex align-items-center">
-                <div class="icon-wrapper me-3">
-                  <i class="fas fa-map-marker-alt fa-lg text-primary"></i>
-                </div>
-                <div>
-                  <strong class="d-block mb-1">Adresse</strong>
-                  <p class="mb-0 text-dark">11 Rue Jules Ferry, Chambéry 73000</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-       <!-- Formulaire de contact -->
-        <div class="col-md-6">
-          <form id="contactForm" class="fade-in">
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Nom" required>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Envoyer</button>
-          </form>
-        </div>
+<!-- Section Contact -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fade-in">Contactez-moi</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form id="contact-form" class="fade-in">
+          <div class="mb-3">
+            <label for="from_name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="from_name" placeholder="Nom" required>
+          </div>
+          <div class="mb-3">
+            <label for="from_email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="from_email" placeholder="Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
       </div>
     </div>
-  </section>
-
-      
+  </div>
+</section>
     <!-- Pied de page avec mention de copyright -->
   <footer class="bg-dark text-white py-4">
     <div class="container text-center">
@@ -333,6 +395,8 @@
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <!-- scroll reveal js -->
   <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- email js -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <!-- Custom js -->
   <script src="assets/js/main.js"></script>
 </body>
