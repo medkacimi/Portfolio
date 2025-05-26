@@ -85,6 +85,5 @@ portfolio/
 
 ### Restons Connectés
 - 💼 [LinkedIn](https://www.linkedin.com/in/mohamed-kacimi/)
-- 🐱 [GitHub](https://github.com/medkacimi)
 
 *Développé avec  par Mohamed KACIMI*
