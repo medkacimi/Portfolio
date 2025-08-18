@@ -77,7 +77,7 @@ ScrollReveal().reveal('.project-button', { origin: 'left' });
  // Typed.js Configuration
  new Typed('#typed-description', {
   strings: [
-    'Étudiant en L3 INGI',
+    'Étudiant en M1 S2IN',
     'Passionné par l\'Innovation Technologique'
   ],
   typeSpeed: 60,        // Vitesse de frappe (en millisecondes par caractère)
