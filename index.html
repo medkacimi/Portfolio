@@ -1,375 +1,527 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KACIMI Mohamed — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-  <div class="cursor-dot"></div>
-  <div class="cursor-ring"></div>
-
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a class="nav-brand" href="#">MK</a>
-      <button class="nav-toggle" id="navToggle">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link">Accueil</a></li>
-        <li><a href="#about" class="nav-link">À propos</a></li>
-        <li><a href="#education" class="nav-link">Formation</a></li>
-        <li><a href="#projects" class="nav-link">Projets</a></li>
-        <li><a href="#skills" class="nav-link">Compétences</a></li>
-        <li><a href="#languages" class="nav-link">Langues</a></li>
-        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header id="home" class="hero">
-    <div class="hero-bg">
-      <div class="grid-overlay"></div>
-      <div class="glow glow-1"></div>
-      <div class="glow glow-2"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-tag reveal">Disponible pour opportunités</div>
-      <h1 class="hero-name reveal">
-        <span class="name-line">KACIMI</span>
-        <span class="name-line accent">Mohamed</span>
-      </h1>
-      <div class="hero-typed reveal">
-        <span id="typed-description"></span><span class="typed-cursor">|</span>
-      </div>
-      <div class="hero-actions reveal">
-        <a href="#projects" class="btn-primary">Voir mes projets</a>
-        <a href="#contact" class="btn-ghost">Me contacter</a>
-      </div>
-      <div class="hero-socials reveal">
-        <a href="https://www.linkedin.com/in/mohamed-kacimi/" target="_blank" class="social-link">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/medkacimi" target="_blank" class="social-link">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-    </div>
-    <div class="scroll-indicator"><div class="scroll-dot"></div></div>
-  </header>
-
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">01 — À propos</span>
-        <h2 class="section-title">Qui suis-je ?</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p class="about-lead">Étudiant en <strong>M1 Système d'Information &amp; Innovation Digitale</strong> à l'IAE Savoie Mont Blanc.</p>
-          <p>Fort d'un parcours diversifié alliant sciences économiques et classes préparatoires, j'ai développé une approche unique mêlant compétences techniques et vision stratégique.</p>
-          <p>Ma passion pour le développement web et les nouvelles technologies me pousse à explorer de nouveaux horizons et à relever des défis innovants.</p>
-          <div class="about-tags">
-            <span class="tag">Développement Front-end</span>
-            <span class="tag">Analyse de données</span>
-            <span class="tag">Gestion de projets</span>
-            <span class="tag">Travail d'équipe</span>
-          </div>
-          <div class="about-ctas">
-            <a href="#contact" class="btn-primary">Me contacter</a>
-            <a href="#projects" class="btn-ghost">Mes projets</a>
-          </div>
-        </div>
-        <div class="about-stats reveal">
-          <div class="stat-card">
-            <div class="stat-number">3<span>+</span></div>
-            <div class="stat-label">Projets réalisés</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">4<span>+</span></div>
-            <div class="stat-label">Années d'études</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">3<span>+</span></div>
-            <div class="stat-label">Technologies</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">3</div>
-            <div class="stat-label">Langues parlées</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education" class="section section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">02 — Formation</span>
-        <h2 class="section-title">Parcours académique</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-year">2025 — 2026</div>
-            <h3>M1 Système d'Information &amp; Innovation Digitale</h3>
-            <p>IAE Savoie Mont Blanc — Annecy, France</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-year">2023 — 2025</div>
-            <h3>Licence Sciences Économiques</h3>
-            <p>Université Savoie Mont Blanc — Annecy, France</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-year">2021 — 2023</div>
-            <h3>Diplôme d'accès aux grandes écoles de commerce</h3>
-            <p>CPGE Moulay Idriss — Fès, Maroc</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-year">2020 — 2021</div>
-            <h3>Baccalauréat Sciences Économiques et Gestion</h3>
-            <p>Lycée Oum Rabiaa — M'rirt, Maroc</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">03 — Projets</span>
-        <h2 class="section-title">Mes réalisations</h2>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="assets/imgs/images.png" alt="Clone YouTube">
-            <div class="project-overlay">
-              <a href="https://github.com/medkacimi/Youtube-clone" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> Voir le code
-              </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>KACIMI Mohamed — Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a class="nav-brand" href="#">MK</a>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link">Accueil</a></li>
+                    <li><a href="#about" class="nav-link">À propos</a></li>
+                    <li><a href="#education" class="nav-link">Formation</a></li>
+                    <li><a href="#projects" class="nav-link">Projets</a></li>
+                    <li><a href="#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="#languages" class="nav-link">Langues</a></li>
+                    <li>
+                        <a href="#contact" class="nav-link nav-cta">Contact</a>
+                    </li>
+                </ul>
             </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="ptag">HTML</span>
-              <span class="ptag">CSS</span>
-              <span class="ptag">Responsive</span>
-            </div>
-            <h3 class="project-title">Clone YouTube</h3>
-            <p class="project-desc">Développement d'un clone de l'interface YouTube avec mise en page responsive et attention particulière aux détails UX.</p>
-          </div>
-        </div>
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="assets/imgs/cpge_lycee_moulay_idriss_logo.jpg" alt="Projets CPGE">
-            <div class="project-overlay">
-              <span class="project-link"><i class="fas fa-university"></i> Académique</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="ptag">Scilab</span>
-              <span class="ptag">Data Analysis</span>
-              <span class="ptag">Algorithmes</span>
-            </div>
-            <h3 class="project-title">Projets Académiques CPGE</h3>
-            <p class="project-desc">Bases de données relationnelles, algorithmes complexes avec Scilab et analyse de données scientifiques.</p>
-          </div>
-        </div>
-        <div class="project-card reveal">
-          <div class="project-img" style="background:#0a0a0a;">
-            <img src="assets/imgs/jupyter-logo.png" alt="Mini Projet Python" style="object-fit:contain;">
-            <div class="project-overlay">
-              <a href="https://github.com/medkacimi/Mini-projet" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> Voir le code
-              </a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="ptag">Python</span>
-              <span class="ptag">Pandas</span>
-              <span class="ptag">Matplotlib</span>
-            </div>
-            <h3 class="project-title">Analyse Réussite Scolaire</h3>
-            <p class="project-desc">Analyse de l'impact socio-économique sur les résultats scolaires via méthodes statistiques avancées et visualisations de données.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </nav>
 
-  <section id="skills" class="section section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">04 — Compétences</span>
-        <h2 class="section-title">Mon arsenal</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-group reveal">
-          <h4 class="skill-group-title"><i class="fas fa-code"></i> Front-end</h4>
-          <div class="skill-item">
-            <div class="skill-info"><span>HTML / CSS</span><span>90%</span></div>
-            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info"><span>JavaScript</span><span>70%</span></div>
-            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <h4 class="skill-group-title"><i class="fas fa-chart-bar"></i> Data Analysis</h4>
-          <div class="skill-item">
-            <div class="skill-info"><span>Python (Numpy, Pandas)</span><span>75%</span></div>
-            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info"><span>Data Visualisation</span><span>70%</span></div>
-            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <h4 class="skill-group-title"><i class="fas fa-laptop"></i> Outils Microsoft</h4>
-          <div class="skill-item">
-            <div class="skill-info"><span>Excel</span><span>80%</span></div>
-            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info"><span>Word / PowerPoint</span><span>85%</span></div>
-            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <h4 class="skill-group-title"><i class="fas fa-terminal"></i> Langages</h4>
-          <div class="skill-item">
-            <div class="skill-info"><span>Python</span><span>75%</span></div>
-            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info"><span>Scilab</span><span>65%</span></div>
-            <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <header id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <p class="hero-sub reveal">Étudiant M1 · Annecy, France</p>
+                <h1 class="hero-name reveal">
+                    <span class="name-line">KACIMI</span>
+                    <span class="name-line">Mohamed</span>
+                </h1>
+                <div class="hero-typed reveal">
+                    <span id="typed-description"></span>
+                </div>
+                <div class="hero-actions reveal">
+                    <a href="#projects" class="btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn-ghost">Me contacter</a>
+                </div>
+                <div class="hero-socials reveal">
+                    <a
+                        href="https://www.linkedin.com/in/mohamed-kacimi/"
+                        target="_blank"
+                        class="social-link"
+                    >
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                        href="https://github.com/medkacimi"
+                        target="_blank"
+                        class="social-link"
+                    >
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
 
-  <section id="languages" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">05 — Langues</span>
-        <h2 class="section-title">Communications</h2>
-      </div>
-      <div class="languages-grid">
-        <div class="lang-card reveal">
-          <div class="lang-flag">🇫🇷</div>
-          <div class="lang-info">
-            <h3>Français</h3>
-            <p>Courant</p>
-          </div>
-          <div class="lang-level">
-            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
-          </div>
-        </div>
-        <div class="lang-card reveal">
-          <div class="lang-flag">🇬🇧</div>
-          <div class="lang-info">
-            <h3>Anglais</h3>
-            <p>Intermédiaire — TOEIC</p>
-          </div>
-          <div class="lang-level">
-            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
-          </div>
-        </div>
-        <div class="lang-card reveal">
-          <div class="lang-flag">🇲🇦</div>
-          <div class="lang-info">
-            <h3>Arabe</h3>
-            <p>Langue maternelle</p>
-          </div>
-          <div class="lang-level">
-            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">À propos</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p class="about-lead">
+                            Je suis étudiant en
+                            <strong
+                                >M1 Système d'Information &amp; Innovation
+                                Digitale</strong
+                            >
+                            à l'IAE Savoie Mont Blanc — une formation qui mêle
+                            stratégie, tech et gestion de projet.
+                        </p>
+                        <p>
+                            Mon parcours est un peu atypique : j'ai commencé par
+                            des classes prépa éco au Maroc, ce qui m'a surtout
+                            appris à travailler sous pression et à aller vite.
+                            Depuis, je me suis tourné vers le développement web
+                            et l'analyse de données, deux domaines où je
+                            progresse constamment.
+                        </p>
+                        <p>
+                            Je cherche à combiner rigueur analytique et
+                            créativité — pas juste coder quelque chose qui
+                            marche, mais comprendre pourquoi ça marche.
+                        </p>
+                        <div class="about-tags">
+                            <span class="tag">Développement Front-end</span>
+                            <span class="tag">Analyse de données</span>
+                            <span class="tag">Gestion de projets</span>
+                            <span class="tag">Travail d'équipe</span>
+                        </div>
+                        <div class="about-ctas">
+                            <a href="#contact" class="btn-primary"
+                                >Me contacter</a
+                            >
+                            <a href="#projects" class="btn-ghost"
+                                >Mes projets</a
+                            >
+                        </div>
+                    </div>
+                    <div class="about-stats reveal">
+                        <div class="stat-card">
+                            <div class="stat-number">3<span>+</span></div>
+                            <div class="stat-label">Projets réalisés</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">4<span>+</span></div>
+                            <div class="stat-label">Années d'études</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">3<span>+</span></div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Langues parlées</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="contact" class="section section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">06 — Contact</span>
-        <h2 class="section-title">Travaillons ensemble</h2>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <p class="contact-lead">Vous avez un projet, une opportunité, ou envie d'échanger ? Je suis ouvert à toute conversation.</p>
-          <div class="contact-links">
-            <a href="https://www.linkedin.com/in/mohamed-kacimi/" target="_blank" class="contact-link">
-              <i class="fab fa-linkedin-in"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://github.com/medkacimi" target="_blank" class="contact-link">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-          </div>
-        </div>
-        <form id="contact-form" class="contact-form reveal">
-          <div class="form-group">
-            <input type="text" id="from_name" placeholder=" " required>
-            <label for="from_name">Votre nom</label>
-          </div>
-          <div class="form-group">
-            <input type="email" id="from_email" placeholder=" " required>
-            <label for="from_email">Votre email</label>
-          </div>
-          <div class="form-group">
-            <textarea id="message" rows="5" placeholder=" " required></textarea>
-            <label for="message">Votre message</label>
-          </div>
-          <button type="submit" class="btn-primary btn-full">
-            <span>Envoyer le message</span>
-            <i class="fas fa-arrow-right"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
+        <section id="education" class="section section-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Formation</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-year">2025 — 2026</div>
+                            <h3>
+                                M1 Système d'Information &amp; Innovation
+                                Digitale
+                            </h3>
+                            <p>IAE Savoie Mont Blanc — Annecy, France</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-year">2023 — 2025</div>
+                            <h3>Licence Sciences Économiques</h3>
+                            <p>Université Savoie Mont Blanc — Annecy, France</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-year">2021 — 2023</div>
+                            <h3>
+                                Diplôme d'accès aux grandes écoles de commerce
+                            </h3>
+                            <p>CPGE Moulay Idriss — Fès, Maroc</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-year">2020 — 2021</div>
+                            <h3>
+                                Baccalauréat Sciences Économiques et Gestion
+                            </h3>
+                            <p>Lycée Oum Rabiaa — M'rirt, Maroc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <span class="footer-brand">MK</span>
-        <p>© 2025 KACIMI Mohamed — Tous droits réservés</p>
-        <div class="footer-links">
-          <a href="https://github.com/medkacimi" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/mohamed-kacimi/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Projets</h2>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card reveal">
+                        <div class="project-img">
+                            <img
+                                src="assets/imgs/images.png"
+                                alt="Clone YouTube"
+                            />
+                            <div class="project-overlay">
+                                <a
+                                    href="https://github.com/medkacimi/Youtube-clone"
+                                    target="_blank"
+                                    class="project-link"
+                                >
+                                    <i class="fab fa-github"></i> Voir le code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="ptag">HTML</span>
+                                <span class="ptag">CSS</span>
+                                <span class="ptag">Responsive</span>
+                            </div>
+                            <h3 class="project-title">Clone YouTube</h3>
+                            <p class="project-desc">
+                                Développement d'un clone de l'interface YouTube
+                                avec mise en page responsive et attention
+                                particulière aux détails UX.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project-card reveal">
+                        <div class="project-img">
+                            <img
+                                src="assets/imgs/cpge_lycee_moulay_idriss_logo.jpg"
+                                alt="Projets CPGE"
+                            />
+                            <div class="project-overlay">
+                                <span class="project-link"
+                                    ><i class="fas fa-university"></i>
+                                    Académique</span
+                                >
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="ptag">Scilab</span>
+                                <span class="ptag">Data Analysis</span>
+                                <span class="ptag">Algorithmes</span>
+                            </div>
+                            <h3 class="project-title">
+                                Projets Académiques CPGE
+                            </h3>
+                            <p class="project-desc">
+                                Bases de données relationnelles, algorithmes
+                                complexes avec Scilab et analyse de données
+                                scientifiques.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project-card reveal">
+                        <div class="project-img" style="background: #0a0a0a">
+                            <img
+                                src="assets/imgs/jupyter-logo.png"
+                                alt="Mini Projet Python"
+                                style="object-fit: contain"
+                            />
+                            <div class="project-overlay">
+                                <a
+                                    href="https://github.com/medkacimi/Mini-projet"
+                                    target="_blank"
+                                    class="project-link"
+                                >
+                                    <i class="fab fa-github"></i> Voir le code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="ptag">Python</span>
+                                <span class="ptag">Pandas</span>
+                                <span class="ptag">Matplotlib</span>
+                            </div>
+                            <h3 class="project-title">
+                                Analyse Réussite Scolaire
+                            </h3>
+                            <p class="project-desc">
+                                Analyse de l'impact socio-économique sur les
+                                résultats scolaires via méthodes statistiques
+                                avancées et visualisations de données.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Compétences</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-group reveal">
+                        <h4 class="skill-group-title">
+                            <i class="fas fa-code"></i> Front-end
+                        </h4>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML / CSS</span><span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>JavaScript</span><span>63%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="63"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h4 class="skill-group-title">
+                            <i class="fas fa-chart-bar"></i> Data Analysis
+                        </h4>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Python (Numpy, Pandas)</span
+                                ><span>72%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="72"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Data Visualisation</span><span>67%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="67"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h4 class="skill-group-title">
+                            <i class="fas fa-laptop"></i> Outils Microsoft
+                        </h4>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Excel</span><span>79%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="79"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Word / PowerPoint</span><span>84%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="84"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h4 class="skill-group-title">
+                            <i class="fas fa-terminal"></i> Langages
+                        </h4>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Python</span><span>72%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="72"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Scilab</span><span>58%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="58"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Langues</h2>
+                </div>
+                <div class="languages-grid">
+                    <div class="lang-card reveal">
+                        <div class="lang-flag">🇫🇷</div>
+                        <div class="lang-info">
+                            <h3>Français</h3>
+                            <p>Courant</p>
+                        </div>
+                        <div class="lang-level">
+                            <span class="dot filled"></span
+                            ><span class="dot filled"></span
+                            ><span class="dot filled"></span
+                            ><span class="dot filled"></span
+                            ><span class="dot filled"></span>
+                        </div>
+                    </div>
+                    <div class="lang-card reveal">
+                        <div class="lang-flag">🇬🇧</div>
+                        <div class="lang-info">
+                            <h3>Anglais</h3>
+                            <p>Intermédiaire — TOEIC</p>
+                        </div>
+                        <div class="lang-level">
+                            <span class="dot filled"></span
+                            ><span class="dot filled"></span
+                            ><span class="dot filled"></span
+                            ><span class="dot"></span><span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="lang-card reveal">
+                        <div class="lang-flag">🇲🇦</div>
+                        <div class="lang-info">
+                            <h3>Arabe</h3>
+                            <p>Langue maternelle</p>
+                        </div>
+                        <div class="lang-level">
+                            <span class="dot filled"></span
+                            ><span class="dot filled"></span
+                            ><span class="dot filled"></span
+                            ><span class="dot filled"></span
+                            ><span class="dot filled"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Contact</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <p class="contact-lead">
+                            N'hésitez pas à me contacter pour une opportunité,
+                            un projet, ou juste pour échanger.
+                        </p>
+                        <div class="contact-links">
+                            <a
+                                href="https://www.linkedin.com/in/mohamed-kacimi/"
+                                target="_blank"
+                                class="contact-link"
+                            >
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a
+                                href="https://github.com/medkacimi"
+                                target="_blank"
+                                class="contact-link"
+                            >
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact-form reveal">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                id="from_name"
+                                placeholder=" "
+                                required
+                            />
+                            <label for="from_name">Votre nom</label>
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                id="from_email"
+                                placeholder=" "
+                                required
+                            />
+                            <label for="from_email">Votre email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea
+                                id="message"
+                                rows="5"
+                                placeholder=" "
+                                required
+                            ></textarea>
+                            <label for="message">Votre message</label>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">
+                            <span>Envoyer le message</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <span class="footer-brand">MK</span>
+                    <p>© 2025 KACIMI Mohamed — Tous droits réservés</p>
+                    <div class="footer-links">
+                        <a href="https://github.com/medkacimi" target="_blank"
+                            ><i class="fab fa-github"></i
+                        ></a>
+                        <a
+                            href="https://www.linkedin.com/in/mohamed-kacimi/"
+                            target="_blank"
+                            ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
