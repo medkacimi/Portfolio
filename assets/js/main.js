@@ -86,10 +86,10 @@ if (skillsSection) skillsObserver.observe(skillsSection);
 // ---- Typed.js ----
 new Typed("#typed-description", {
     strings: [
-        "Étudiant en M1 S2IN",
-        "Développeur Front-end",
-        "Passionné par l'Innovation Digitale",
-        "Data Enthusiast",
+        "À la recherche d'une alternance Consultant IT / Data",
+        "Développeur BI &amp; Power BI",
+        "Étudiant M1 S2IN · IAE Savoie Mont Blanc",
+        "Python · SQL · Dash · Power BI",
     ],
     typeSpeed: 55,
     backSpeed: 35,

@@ -344,6 +344,88 @@ body {
 }
 .timeline-card p { color: var(--text-muted); font-size: 0.9rem; }
 
+/* ---- EXPERIENCE ---- */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: var(--transition);
+}
+.exp-card:hover {
+  border-color: rgba(108,99,255,0.2);
+  background: var(--surface-2);
+}
+.exp-header {
+  margin-bottom: 20px;
+}
+.exp-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.exp-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+.exp-type {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(108,99,255,0.1);
+  border: 1px solid rgba(108,99,255,0.2);
+  padding: 2px 9px;
+  border-radius: 6px;
+}
+.exp-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.exp-company {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.exp-company i { color: var(--accent); font-size: 0.8rem; }
+.exp-bullets {
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.exp-bullets li {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.65;
+}
+.exp-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.8rem;
+  top: 2px;
+}
+.exp-bullets li strong { color: var(--white); font-weight: 600; }
+.exp-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
 /* ---- PROJECTS ---- */
 .projects-grid {
   display: grid;
